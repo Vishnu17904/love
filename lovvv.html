@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url("valentine-s-wallpaper-heart-frame-love-support-concept.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rectangle {
+    width: 350px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 15px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.no-btn {
+    position: absolute;
+    transition: 0.2s ease;
+}
+</style>
+
+<title>Document</title>
+</head>
+
+<body>
+
+<div class="rectangle">
+    <h2>Hello Gulab Jamun💖</h2>
+    <p>Do you still love me Akshu?</p>
+    <button id="yesbtn">Yes</button>
+    <button id="noBtn" class="no-btn">No</button>
+    <p id="output"></p>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesbtn");
+const output = document.getElementById("output");
+
+// NO button runs away
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+// YES button click
+yesBtn.addEventListener("click", () => {
+    output.textContent = "Love you so much yrr 💖 Please wapas aa jao meri life mein 🥺";
+});
+</script>
+
+</body>
+</html>
